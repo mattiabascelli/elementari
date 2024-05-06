@@ -79,11 +79,11 @@
                 //variazione immagine del gufetto
                 gufetto.src = "gufetto.jpg";
             //le moltiplicazioni sono meglio che addizionare tante volte lo stesso numero
-            for (var i = 1; i <= numero2; i++) { 
+            for (var i = 1; i <= (numero2 - 1); i++) { 
                 spiegazioneMoltiplicazione += numero1 + " + ";
                 }
                  //stampa a video della spiegazione
-                document.getElementById('spiegazione').innerHTML = spiegazioneMoltiplicazione + " = " + risultatoMoltiplicazione + "<br /> Sicuramente è più semplice <strong>moltiplicare</strong> che <em>sommare</em> tutti questi numeri!";
+                document.getElementById('spiegazione').innerHTML = spiegazioneMoltiplicazione + numero1 + " = " + risultatoMoltiplicazione + "<br /> Sicuramente è più semplice <strong>moltiplicare</strong> che <em>sommare</em> tutti questi numeri!";
 
                 var tabellaHTML = "";
                 for (var i = 1; i <= 10; i++) {
