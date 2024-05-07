@@ -73,6 +73,8 @@
             //controllo sui numeri
             if (numero1 > 10 || numero2 > 10) {
                 alert('Devi inserire solo numeri inferiori o uguali a 10');
+            } else if (isNaN(numero1) || isNaN(numero2)) {
+                alert('Devi inserire entrambi i numeri!');
             } else { 
 
             var risultatoMoltiplicazione = numero1 * numero2;
