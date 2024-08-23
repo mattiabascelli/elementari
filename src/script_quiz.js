@@ -7,7 +7,7 @@ function risultatoQuiz() {
     var risposta2 = parseInt(document.getElementById('domanda2').value);
     var risposta3 = parseInt(document.getElementById('domanda3').value);
     var risposta4 = parseInt(document.getElementById('domanda4').value);
-
+    var risposta5 = parseInt(document.getElementById('domanda5').value);
     if (risposta1 == 6) {
         tabellaHTML += "<tr><td><strong>3 x 2</strong></td><td>" + risposta1 + "</td><td><em class='green'>6</em></td></tr>";
         document.getElementById('tabella').innerHTML = tabellaHTML;
@@ -62,6 +62,24 @@ function risultatoQuiz() {
         errori++;
     }
 
-    document.getElementById('risultato').innerHTML = "Hai indovinato ben <strong class='green'>" + indovinate +"</strong> domande, ne hai sbagliate <strong class='red'>"+errori+"</strong> e non hai risposto a <strong>"+nonRisposte+"</strong> domande!";
-        
+    if (risposta5 == 19) {
+        tabellaHTML += "<tr><td><strong>(15 + 7) -3</strong></td><td>" + risposta5 + "</td><td><em class='green'>19</em></td></tr>";
+        document.getElementById('tabella').innerHTML = tabellaHTML;
+        indovinate++;
+    } else if(isNaN(risposta4)){ 
+        tabellaHTML += "<tr><td><strong>13 + 7</strong></td><td><em>non hai risposto</em></td><td><em class='red'>19</em></td></tr>";
+        document.getElementById('tabella').innerHTML = tabellaHTML;
+        nonRisposte++;
+    }else {
+        tabellaHTML += "<tr><td><strong>13 + 7</strong></td><td>" + risposta5 + "</td><td><em class='red'>19</em></td></tr>";
+        document.getElementById('tabella').innerHTML = tabellaHTML;
+        errori++;
+    }
+    if (indovinate > errori && indovinate > nonRisposte) {
+    document.getElementById('risultato').innerHTML = "<strong class='green'>Complimenti!</strong> Hai indovinato ben <strong class='green'>" + indovinate +"</strong> domande, ne hai sbagliate <strong class='red'>"+errori+"</strong> e non hai risposto a <strong>"+nonRisposte+"</strong> domande!";
+    } else if (errori > indovinate && errori > nonRisposte){
+        document.getElementById('risultato').innerHTML = "<strong class='green'>Attenzione!</strong> Hai indovinato solo a <strong class='green'>" + indovinate +"</strong> domande, ne hai sbagliate <strong class='red'>"+errori+"</strong> e non hai risposto a <strong>"+nonRisposte+"</strong> domande!";
+    } else {
+        document.getElementById('risultato').innerHTML = "Hai indovinato ben <strong class='green'>" + indovinate +"</strong> domande, ne hai sbagliate <strong class='red'>"+errori+"</strong> e non hai risposto a <strong>"+nonRisposte+"</strong> domande!";
+    }
 }
