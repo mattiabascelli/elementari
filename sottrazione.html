@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="src/style.css">
 </head>
 <body>
-    <!--Navbar-->
+    <!--Navbar--> 
     <nav class='navbar navbar-expand-lg bg-primary' data-bs-theme="dark">
         <div class='container-fluid'>
             <a class='navbar-brand' href='index.html'>L'ora di Matematica</a>
@@ -45,24 +45,39 @@
         <h1 class="mt-5 mb-3">L'ora della Matematica!</h1>
         <div class="row">
             <div class="col-sm-6">
-                <p><em>Scompri le operazioni aritmetiche divertendoti!</em></p>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a href="addizione.html" class="tastoHome">Addizione</a></li>
-                    <li class="list-group-item"><a href="sottrazione.html" class="tastoHome">Sottrazione</a></li>
-                    <li class="list-group-item"><a href="moltiplicazione.html" class="tastoHome">Moltiplicazione</a></li>
-                    <li class="list-group-item"><a href="divisione.html" class="tastoHome">Divisione</a></li>
-                    <li class="list-group-item"><a href="quiz.html" class="tastoQuiz">Quiz</a></li>
-                  </ul>
+                <h2>Proviamo a fare qualche piccola Sottrazione?</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="numero1">Inserici un numero compreso tra 1 a 100:</label>
+                        <input type="number" class="form-control" id="numero1" name="numero1" />
+                    </div>
+                    <div class="form-group">
+                        <label for="numero2">Inserici un un numero compreso tra 1 a 100:</label>
+                        <input type="number" class="form-control" id="numero2" name="numero2" />
+                    </div>
+                    <br />
+                    <button type="button" class="tastoHome" onclick="calcolaSottrazione()">Calcola Sottrazione</button>
+                </form>
+                <hr />
+                <div id="risultato">
+                </div>
+                <div id="spiegazione">
+
+                </div>
+                <div>
+                    <img src="img/gufetto.jpg" alt="gufetto" id="gufetto"/>
+                </div>
             </div>
             <div class="col-sm-6">
                 <div>
-                    <img src="img/raccoon3.jpg" alt="una volpe e un procione studiano Matematica" id="gufetto"/>
+                    <img src="img/raccoon1.jpg" alt="una volpe e un procione studiano Matematica" id="gufetto"/>
                 </div>
             </div>
         </div>
     </div>
 
-  <!--Footer-->
+    <script src="src/script_sottrazione.js"></script>
+     <!--Footer-->
 
   <nav class="navbar bg-body-tertiary fixed-bottom">
     <div class="container-fluid">
@@ -98,6 +113,5 @@
       </div>
     </div>
   </nav>
-
 </body>
 </html>
