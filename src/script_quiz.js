@@ -78,7 +78,7 @@ function risultatoQuiz() {
     if (indovinate > errori && indovinate > nonRisposte) {
     document.getElementById('risultato').innerHTML = "<strong class='green'>Complimenti!</strong> Hai indovinato ben <strong class='green'>" + indovinate +"</strong> domande, ne hai sbagliate <strong class='red'>"+errori+"</strong> e non hai risposto a <strong>"+nonRisposte+"</strong> domande!";
     } else if (errori > indovinate && errori > nonRisposte){
-        document.getElementById('risultato').innerHTML = "<strong class='green'>Attenzione!</strong> Hai indovinato solo a <strong class='green'>" + indovinate +"</strong> domande, ne hai sbagliate <strong class='red'>"+errori+"</strong> e non hai risposto a <strong>"+nonRisposte+"</strong> domande!";
+        document.getElementById('risultato').innerHTML = "<strong class='red'>Attenzione!</strong> Hai indovinato solo a <strong class='green'>" + indovinate +"</strong> domande, ne hai sbagliate <strong class='red'>"+errori+"</strong> e non hai risposto a <strong>"+nonRisposte+"</strong> domande!";
     } else {
         document.getElementById('risultato').innerHTML = "Hai indovinato ben <strong class='green'>" + indovinate +"</strong> domande, ne hai sbagliate <strong class='red'>"+errori+"</strong> e non hai risposto a <strong>"+nonRisposte+"</strong> domande!";
     }
